@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function appendExp(ch)
+    {
+    res=document.getElementById("tbres").value
+    res=ch
+    document.getElementById("tbres").value+=res
+    }
+    function getResult()
+    {
+    exp=document.getElementById("tbres").value
+    res=eval(exp)
+    document.getElementById("tbres").value=" "
+    document.getElementById("tbres").value=res
+    }
+    function clearResult()
+    {
+    document.getElementById("tbres").value=" "
+    }
+    </script>
+</head>
+<body>
+<input type="text" id="tbres" style="background-color:White;color:black;width:150px;">
+<input type="button" id="btnc" value="Ac" style="background-color:Aqua;height:55px" onclick="clearResult()"><br>
+<input type="button" id="btn9" value="9" onclick="appendExp('9')">
+<input type="button" id="btn8" value="8" onclick="appendExp('8')">
+<input type="button" id="btn7" value="7" onclick="appendExp('7')">
+<input type="button" id="btn+" value="+" style="background-color:Gray" onclick="appendExp('+')"><br>
+<input type="button" id="btn6" value="4" onclick="appendExp('4')">
+<input type="button" id="btn5" value="5" onclick="appendExp('5')">
+<input type="button" id="btn4" value="6" onclick="appendExp('6')">
+<input type="button" id="btn-" value="-" style="background-color:Gray" onclick="appendExp('-')"><br>
+<input type="button" id="bhn3" value="1" onclick="appendExp('1')">
+<input type="button" id="btn3" value="2" onclick="appendExp('2')">
+<input type="button" id="btn2" value="3" onclick="appendExp('3')">
+<input type="button" id="btn/" value="/" style="background-color:Gray" onclick="appendExp('/')"><br>
+<input type="button" id="bhn." value="." onclick="appendExp('.')">
+<input type="button" id="btn1" value="0" onclick="appendExp('0')">
+<input type="button" id="btn=" value="=" onclick="getResult()">
+<input type="button" id="btn*" value="*" style="background-color:Gray" onclick="appendExp('*')">
+
+</body>
+</html>

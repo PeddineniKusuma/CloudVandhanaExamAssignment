@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descending Array Sort</title>
+    <script>
+        function sortDescending()
+        {
+            // Get the array from the input
+            var inputArray = document.getElementById("arrayInput").value.split(',').map(Number);
+            var sortedArray = inputArray.sort(function(a, b)
+            {
+                return b - a;
+            }
+            );
+            document.getElementById("output").textContent = sortedArray;
+        }
+    </script>
+</head>
+<body>
+    <h1>Descending Array Sort</h1>
+    <input type="text" id="arrayInput" placeholder="Enter an array (e.g., 5, 2, 8, 1)">
+    <button onclick="sortDescending()">Sort Descending</button>
+    <p id="output"></p>
+</body>
+</html>
